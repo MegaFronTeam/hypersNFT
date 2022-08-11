@@ -1,6 +1,10 @@
 mixin menu-toggle()
 	+b.toggle-menu-mobile--js.d-lg-none
-		span
+		//- span
+		+e.bg-close
+			img(src="img/svg/ham-close.svg", alt="")
+		+e.bg-open
+			img(src="img/svg/ham-open.svg", alt="")
 mixin mob-mnu()
 	-
 		//- let path = require('path');
@@ -20,14 +24,21 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+		.row
+			+e.col.col-auto
+				+e.logo(href='#')
+					img(src="img/svg/logo.svg", alt="")
+			.col
+				.menu-mobile.menu-mobile--js
+					.menu-mobile__inner
+						+menu-toggle()
+						+mnu()
+					+e.mob-wrap
+						+e.join.btn.btn-outline-primary.btn-small(href='#') Join our community
+						+soc
+						+e.cop Hypers NFT © 2022
+			+e.col--right.col-auto.d-none.d-lg-block
+				+e.join.btn.btn-outline-primary.btn-small(href='#') Join our community
+			.col-auto.d-lg-none
+				+menu-toggle()
 	// end top-nav

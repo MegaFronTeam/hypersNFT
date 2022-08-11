@@ -1,13 +1,10 @@
 {
 	"nav":[
-		{ "name":"Наши работы", "url":"#"},
-		{	"name":"Цены", "url":"#"},
-		{"name":"Калькулятор", "url":"#"},
-		{"name":"Акции", "url":"#"} ,
-		{
-			"name":"Заказать", 
-			"url":"#"
-			}
+		{ "name":"About", "url":"#"},
+		{	"name":"Team", "url":"#"},
+		{"name":"Road Map", "url":"#"},
+		{"name":"FAQ", "url":"#"} ,
+		{"name":"Community", "url":"#"}
 	],
 	"social":[
 		"fb","instagram","telegram"

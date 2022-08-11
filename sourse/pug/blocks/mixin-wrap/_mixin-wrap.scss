@@ -1,32 +1,50 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(10px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
-		display: grid;
-		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			// opacity: .6 ;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: rem(60);
+		height: rem(60);
+		border-radius: 50%;
+		@include media-breakpoint-up(lg) {
+			background-color: $white;
+			.icon {
+				color: $primary;
+			}
 		}
-		
+		background-color: $primary;
+		.icon {
+			color: $white;
+		}
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			// opacity: .6 ;
+			@include media-breakpoint-up(lg) {
+				background-color: $primary;
+				.icon {
+					color: $white;
+				}
+			}
+			background-color: $white;
+			.icon {
+				color: $primary;
+			}
+		}
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-
-
 }
 
-
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -34,23 +52,20 @@
 	}
 }
 
-
-
-
-.addBlock{
+.addBlock {
 	color: var(--color, #{$primary});
 	border: 1px solid;
 	border-radius: 23px;
 	display: flex;
 	position: relative;
 	overflow: hidden;
-	input{
+	input {
 		color: inherit;
 		text-align: center;
 		border: none;
 		height: rem(45);
 	}
-	&__btn{
+	&__btn {
 		color: inherit;
 		height: rem(45);
 		position: relative;
@@ -64,24 +79,23 @@
 		// padding-right: rem(8);
 		width: rem(26);
 		&::before,
-		&::after{
-			content: '';
+		&::after {
+			content: "";
 			width: 10px;
-			height: 2px; 
+			height: 2px;
 			background-color: currentColor;
 			@include a-cent;
 			position: absolute;
 		}
-		&--plus::after{
+		&--plus::after {
 			transform: rotate(90deg);
 		}
 	}
 }
 
-
-.search-block{
+.search-block {
 	position: relative;
-	input{
+	input {
 		font-size: 14px;
 		width: 100%;
 		border: none !important;
@@ -90,11 +104,11 @@
 		padding-top: rem(14);
 		padding-bottom: rem(14);
 	}
-	.icon{
+	.icon {
 		font-size: rem(20);
 		border: none !important;
 	}
-	button{
+	button {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -107,7 +121,7 @@
 	}
 }
 
-.breadcrumb-item{
+.breadcrumb-item {
 	width: auto;
 	margin-right: rem(32);
 }

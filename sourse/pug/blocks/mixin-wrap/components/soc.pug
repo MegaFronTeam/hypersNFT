@@ -7,10 +7,7 @@ mixin item-sos(icon, a='#')
 //- social buttons
 mixin soc()
 	+b.soc
-		if block
-			block
-		else
-			each soc in social
-				+item-sos(soc)
+		+item-sos('twitter')
+		+item-sos('telegram')
 
 //- /social buttons 
