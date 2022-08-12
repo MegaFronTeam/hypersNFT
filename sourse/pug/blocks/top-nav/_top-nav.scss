@@ -13,11 +13,13 @@
 	padding-right: rem(25);
 	padding-bottom: rem(20);
 	transition-duration: 0.4s;
-	@include media-breakpoint-down(lg){
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100px;
+	width: 100%;
+	z-index: 20;
+	@include media-breakpoint-down(lg) {
 		height: 79px;
 		background-color: $white;
 	}
@@ -53,8 +55,8 @@
 			padding: rem(15) rem(20);
 		}
 	}
-	&__mob-wrap{
-		@include media-breakpoint-up(lg){
+	&__mob-wrap {
+		@include media-breakpoint-up(lg) {
 			display: none;
 		}
 		display: flex;
@@ -62,13 +64,13 @@
 		align-items: center;
 		margin-top: rem(10);
 	}
-	.soc{
+	.soc {
 		margin-top: rem(40);
 	}
-	&__cop{
+	&__cop {
 		text-align: center;
 		font-size: $small;
-		line-height: calc(20/16);
+		line-height: calc(20 / 16);
 		margin-top: rem(40);
 	}
 	@include media-breakpoint-up(md) {

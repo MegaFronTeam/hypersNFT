@@ -1,0 +1,77 @@
+// start .sAbout
+.sAbout {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(120)};
+	}
+	--sPT: #{rem(30)};
+	--sPB: #{rem(50)};
+	// --sPB:0;
+	h2 {
+		text-align: center;
+		margin-bottom: rem(40);
+	}
+	// background-image: url(../img/about-bg.png);
+	// background-size: contain;
+	// background-repeat: no-repeat;
+	// background-position: center;
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	&__bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img {
+			width: 100%;
+			max-width: 100%;
+			height: 100%;
+			max-height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__caption {
+		width: 100%;
+		max-width: rem(980);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+		}
+		text-align: center;
+		margin-bottom: rem(40);
+	}
+	&__images {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+			height: rem(340);
+		}
+		height: rem(180);
+		margin-bottom: rem(40);
+	}
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-left: rem(25);
+			padding-right: rem(25);
+		}
+		position: relative;
+		z-index: 4;
+	}
+	
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sAbout

@@ -1,55 +1,110 @@
 // start .headerBlock
 .headerBlock {
-	margin-bottom: 1px;
-	min-height: 100vh;
-	min-height: calc(var(--vh, 1vh) * 100);
-	// background-image: url(../img);
-	// background-color: #000000;
-
-	h1 {
-		margin-bottom: 1px;
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(100)};
+		--sPB: #{rem(220)};
+		padding-left: rem(40);
+		padding-right: rem(40);
+	}
+	--sPT: #{rem(80)};
+	--sPB: #{rem(90)};
+	padding-left: rem(25);
+	padding-right: rem(25);
+	display: flex;
+	flex-direction: column;
+	&__bg-text {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		transform: translateX(-50%);
+		@include media-breakpoint-up(lg) {
+			top: 29.4%;
+			width: calc(100vw - rem(80));
+		}
+		width: 100%;
+		top: 36.25%;
+		img {
+			max-width: 100%;
+		}
+	}
+	&__wrap {
+		display: flex;
+		margin-top: auto;
+		flex-direction: column;
+		align-items: center;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row;
+		}
+	}
+	&__block {
+		display: flex;
+		@include media-breakpoint-up(lg){
+			width: rem(130);
+		}
+		@include media-breakpoint-down(lg){
+			justify-content: center;
+		}
+	}
+	&__caption{
+		@include media-breakpoint-up(lg){
+			margin-bottom: 0;
+			flex-grow: 1;
+			font-size: $small;
+		}
+		margin-bottom: rem(29);
+		text-align: center;
+		color:$secondary;
+	}
+	@include media-breakpoint-up(xl) {
 	}
 
-	h2 {
-		margin-bottom: 1px;
+	@include media-breakpoint-up(lg) {
 	}
 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-up(md) {}
-
-	@include media-breakpoint-up(sm) {}
-
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(xl) {
+	}
 
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
 
 // end.headerBlock

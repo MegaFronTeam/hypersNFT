@@ -1,0 +1,126 @@
+// start .sRoadmap
+.sRoadmap {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(180)};
+	}
+	--sPT: #{rem(60)};
+	--sPB: #{rem(84)};
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-left: rem(25);
+			padding-right: rem(25);
+		}
+	}
+	h2 {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(80);
+		}
+		margin-bottom: rem(60);
+		text-align: center;
+	}
+	&__road {
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-width: rem(1180);
+	}
+	&__road-item {
+		display: flex;
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			&:nth-child(odd) {
+				justify-content: flex-end;
+			}
+			justify-content: flex-start;
+			padding-bottom: rem(40);
+			min-height: rem(251);
+		}
+		@include media-breakpoint-down(lg) {
+			padding-left: rem(60);
+			padding-bottom: rem(40);
+		}
+		margin-bottom: rem(20);
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url(../img/road-item-bg.png);
+			background-size: contain;
+			top: 0;
+			@include media-breakpoint-up(lg) {
+				left: 50%;
+				transform: translateX(-50%);
+				width: rem(60);
+				height: rem(60);
+			}
+			left: 0;
+			width: rem(40);
+			height: rem(40);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			@include media-breakpoint-up(lg) {
+				top: rem(80);
+				left: 50%;
+				transform: translateX(-50%);
+				height: calc(100% - rem(80));
+			}
+			width: 0;
+			border-left: 2px dashed #15141a;
+			left: 20px;
+			top: rem(60);
+			height: calc(100% - rem(60));
+		}
+	}
+	h3 {
+		margin-bottom: rem(20);
+	}
+	&__road-item-wrap {
+		@include media-breakpoint-up(lg) {
+			max-width: calc(50% - rem(110));
+		}
+	}
+	&__road-item-finish {
+		position: relative;
+		@include media-breakpoint-up(lg) {
+			text-align: center;
+			padding-top: rem(80);
+		}
+		@include media-breakpoint-down(lg) {
+			padding-left: rem(60);
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $primary;
+			@include media-breakpoint-up(lg) {
+				top: rem(20);
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			@include media-breakpoint-down(lg) {
+				top: 50%;
+				left: rem(10);
+				transform: translateY(-50%);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sRoadmap

@@ -1,0 +1,18 @@
+mixin sRoadmap(data)
+	// start sRoadmap
+	+b.SECTION.sRoadmap.section#sRoadmap&attributes(attributes)
+		.container
+			h2 Roadmap
+			+e.road
+				mixin item(title,caption)
+					+e.road-item
+						+e.road-item-wrap
+							h3!=title
+							+e.road-item-caption!=caption
+				+item(`Preparation<br>for the project`,`Creation of&nbsp;the concept, Drawing and generation of&nbsp;the collection, creation and launch of&nbsp;social networks, marketing`)
+				+item(`Preparation<br>for the project`,`Sale of&nbsp;the collection on&nbsp;Binance NFT in&nbsp;3&nbsp;rounds`)
+				+item(`Preparation<br>for the project`,`Integration into metaverse`)
+				+item(`Preparation<br>for the project`,`Production of&nbsp;a&nbsp;limited fashion line of&nbsp;clothes`)
+				+item(`Preparation<br>for the project`,`Making figurines of&nbsp;Hypers`)
+				+e.road-item-finish And that's just the beginning
+	// end sRoadmap
