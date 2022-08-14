@@ -542,4 +542,14 @@ h4 {
 		height: 100%;
 		object-fit: cover;
 	}
+	&--up{
+		bottom: auto;
+		top: 0;
+	}
+}
+.container{
+	@include media-breakpoint-down(sm){
+		padding-left: rem(25);
+		padding-right: rem(25);
+	}
 }

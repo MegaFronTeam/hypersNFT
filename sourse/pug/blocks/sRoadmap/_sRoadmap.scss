@@ -2,10 +2,10 @@
 .sRoadmap {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(80)};
-		--sPB: #{rem(180)};
+		--sPB: #{rem(80)};
 	}
 	--sPT: #{rem(60)};
-	--sPB: #{rem(84)};
+	--sPB: #{rem(54)};
 	.container {
 		@include media-breakpoint-down(sm) {
 			padding-left: rem(25);

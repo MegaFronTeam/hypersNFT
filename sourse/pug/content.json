@@ -27,5 +27,40 @@
 			"title": "заловок 33",
 			"text": "текст"
 			}
-		]
+		],
+		"sFAQ": {
+			"title": "faq",
+			"ddGroup": [
+				{
+					"active": "active",
+					"title": "When is the start of sales?",
+					"content": [
+						"The start of&nbsp;sales will be&nbsp;announced on&nbsp;our social networks."
+					]
+				},
+				{
+					"active": "",
+					"title": "What will be the price of NFT?",
+					"content": [
+						"Round 1: $99, Round 2: $149, Round 3: $199"
+					]
+				},
+				{
+					"active": "",
+					"title": "Where can I buy and track my NFTs?",
+					"content": [
+						"NFTs will only be&nbsp;available for purchase on&nbsp;Binance and will be&nbsp;available in&nbsp;your account."
+					]
+				},
+				{
+					"active": "",
+					"title": "Why Hypers?",
+					"content": [
+						"Hypers are the most attractive NFTs powered by&nbsp;Binance. For a&nbsp;long time, we&nbsp;have been gathering a&nbsp;team of&nbsp;the best specialists and analyzing the NFT market. Now we&nbsp;are ready to&nbsp;present the best product."
+					]
+				}
+				
+			]
+		}
 	}
+	

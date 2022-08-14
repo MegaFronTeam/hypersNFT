@@ -6,9 +6,10 @@ include ../blocks/top-nav/_top-nav.pug
 include ../blocks/headerBlock/_headerBlock.pug
 include ../blocks/sAbout/_sAbout.pug
  
-//- include ../blocks/sContact/_sContact.pug
+include ../blocks/sPic/_sPic.pug
+include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sRoadmap/_sRoadmap.pug
-//- include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sFAQ/_sFAQ.pug
 include ../blocks/footer/_footer.pug
 
 block variables
@@ -27,9 +28,10 @@ block pagecontent
 	+headerBlock 
 	+sAbout
 	+sRoadmap()
-	//- +sContact()
-	
-	//- +footer()
+	+sPic
+	+sTeam()
+	+sFAQ
+	+footer()
       
 
 

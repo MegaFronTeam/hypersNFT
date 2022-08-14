@@ -1,43 +1,198 @@
 .footer {
-		
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(450)};
+	}
+	--sPT: #{rem(60)};
+	--sPB: #{rem(0)};
+	position: relative;
 	margin-top: auto;
+	display: flex;
+	flex-direction: column;
+	@include media-breakpoint-up(lg) {
+		min-height: 46.7vw;
+	}
+	min-height: unset;
+	h2 {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(20);
+		text-align: center;
+	}
+	&__caption {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+		}
+		margin-bottom: rem(40);
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__btn {
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		align-items: center;
+		padding: rem(30) rem(40);
+		.icon {
+			margin-right: rem(10);
+			font-size: rem(24);
+		}
+	}
+	&__copyright {
+		line-height: calc(20 / 16);
+		font-size: $small;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			white-space: nowrap;
+			right: rem(40);
+			bottom: rem(60);
+		}
+		@include media-breakpoint-down(lg) {
+			margin-top: rem(60);
+			margin-bottom: rem(40);
+		}
+	}
+	&__pics-wrap {
+		@include media-breakpoint-up(lg) {
+			width: rem(1180);
+			max-width: calc(100vw - 440px);
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		display: flex;
+		align-items: flex-end;
+		@include media-breakpoint-down(lg) {
+			margin-top: auto;
+			width: 100vw;
+			position: relative;
+			height: 54.36vw;
+			padding-top: rem(40);
+		}
+		height: auto;
+		@include media-breakpoint-down(lg) {
+			width: 100vw;
+		}
+	}
+	&__pic {
+		@include media-breakpoint-up(lg) {
+			@include block(480, 400);
+		}
+		@include block(190, 212);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			&--pic1,
+			&--pic3 {
+				width: 29.66%;
+			}
+			&--pic2 {
+				width: 40.68%;
+			}
+		}
+		@include media-breakpoint-down(lg) {
+			&--pic1,
+			&--pic3 {
+				z-index: 2;
+				width: 35.59vw;
+				position: absolute;
+				bottom: 0;
+			}
+			&--pic1 {
+				left: 0;
+			}
+			&--pic3 {
+				right: 0;
+			}
+			&--pic2 {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: 3;
+				width: 48.81vw;
+			}
+		}
+	}
+	&__bg {
+		position: absolute !important;
+		z-index: 0;
+		@include block(780, 780);
+		@include media-breakpoint-up(lg) {
+			width: rem(780);
+		}
+		width: 100%;
+		top: rem(7);
+		left: 50%;
+		transform: translateX(-50%);
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	//
+	@include media-breakpoint-up(xl) {
+	}
 
-// 
-@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {
+	}
 
-@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {
+	}
 
-@include media-breakpoint-up(xs) {}
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
 
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-// 
-@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(sm) {
+	}
 
+	@include media-breakpoint-only(md) {
+	}
 
-// 
-@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(lg) {
+	}
 
-@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(xl) {
+	}
 
-@include media-breakpoint-only(md) {}
+	//
+	@include media-breakpoint-down(xl) {
+	}
 
-@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-down(lg) {
+	}
 
-@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(md) {
+	}
 
+	@include media-breakpoint-down(sm) {
+	}
 
-// 
-@include media-breakpoint-down(xl) {}
-
-@include media-breakpoint-down(lg) {}
-
-@include media-breakpoint-down(md) {}
-
-@include media-breakpoint-down(sm) {}
-
-@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+	}
 }

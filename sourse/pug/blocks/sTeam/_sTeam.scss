@@ -1,0 +1,91 @@
+// start .sTeam
+.sTeam {
+	@include media-breakpoint-up(lg) {
+		--sPT: #{rem(80)};
+		--sPB: #{rem(120)};
+	}
+	--sPT: #{rem(60)};
+	--sPB: #{rem(90)};
+	h2 {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(20);
+	}
+	&__caption {
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+		}
+		margin-bottom: rem(40);
+	}
+	.row {
+		--bs-gutter-x: #{rem(20)};
+		--bs-gutter-y: #{rem(50)};
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		picture {
+			width: 100%;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-bottom: rem(40);
+			img{
+				width: 100%;
+			}
+		}
+	}
+	&__item-title-wrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: rem(20);
+	}
+	&__item-title {
+		font-weight: 700;
+		line-height: 100%;
+		font-size: $large;
+		margin-right: rem(5);
+	}
+	&__item-link {
+		margin-left: rem(5);
+		display: inline-block;
+		.icon {
+			font-size: rem(20);
+		}
+	}
+	&__item-caption {
+		text-align: center;
+		font-size: $small;
+		color: $secondary;
+	}
+	&__btn{
+		@include media-breakpoint-up(lg){
+			margin-top: rem(60);
+		}
+		margin-top: rem(40);
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.container{
+		display: flex;
+		flex-direction: column;
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sTeam

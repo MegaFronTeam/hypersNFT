@@ -1,0 +1,48 @@
+mixin sFAQ()
+	// start sFAQ
+	+b.SECTION.sFAQ.section#sFAQ&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 FAQ
+			h3 How do I buy Hypers?
+			+e.number-wrap
+				+e.number-item-wrap--first
+					+e.number-item Create an&nbsp;account on&nbsp;the Binance
+						+e.number 1
+				+e.number-item-wrap--second
+					+e.number-item Find the collection with official links
+						+e.number 2
+				+e.number-item-wrap--third
+					+e.number-item Choose your favorite NFT and buy it&nbsp;4. The NFT is&nbsp;available in&nbsp;your Binance account
+						+e.number 3
+			+ddGroup()
+				each item in sFAQ.ddGroup
+					+ddGroupItem(`${item.title}`)
+						each paragraph in item.content
+							p!= paragraph
+			+e.btn.btn.btn-outline-primary(href="#") Join our community
+		.paper-bg
+			img(src="img/paper-bg-up.png", alt="")
+	// end sFAQ
+
+mixin ddGroup()
+	//-родителю елементов .dd-group-js
+	+b.dd-group.dd-group-js
+		if block
+			block
+		else
+			+ddGroupItem('вопрос1', 'active')
+			+ddGroupItem('вопрос2')
+			+ddGroupItem('вопрос3')
+
+mixin ddGroupItem(txt, activeClasses='')
+	//-хедеру и контенту => .dd-head-js, .dd-content-js
+	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
+	+e.item(class=activeClasses)
+		+e.head.dd-head-js=txt
+		+e.content.dd-content-js(class=activeClasses)
+			if block
+				block
+			else
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ducimus et fuga id, iure molestiae nam quaerat qui sequi similique.

@@ -271,12 +271,12 @@ const JSCCommon = {
 								$(this).toggleClass('active');
 							});
 						}
-						else {
-							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.dd-content-js').slideUp(function () {
-								$(this).removeClass('active');
-							});
-						}
+						// else {
+						// 	$(this.parentElement).removeClass('active');
+						// 	$(this.parentElement).find('.dd-content-js').slideUp(function () {
+						// 		$(this).removeClass('active');
+						// 	});
+						// }
 					});
 
 				});
