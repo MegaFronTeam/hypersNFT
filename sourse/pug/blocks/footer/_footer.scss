@@ -36,6 +36,8 @@
 		margin-right: auto;
 		display: flex;
 		align-items: center;
+		position: relative;
+		z-index: 2;
 		padding: rem(30) rem(40);
 		.icon {
 			margin-right: rem(10);
