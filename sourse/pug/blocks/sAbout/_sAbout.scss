@@ -2,7 +2,7 @@
 .sAbout {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(80)};
-		--sPB: #{rem(120)};
+		--sPB: #{rem(180)};
 	}
 	--sPT: #{rem(30)};
 	--sPB: #{rem(50)};
@@ -43,14 +43,14 @@
 		text-align: center;
 		margin-bottom: rem(40);
 	}
-	&__images {
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(60);
-			height: rem(340);
-		}
-		height: rem(180);
-		margin-bottom: rem(40);
-	}
+	// &__images {
+	// 	@include media-breakpoint-up(lg) {
+	// 		margin-bottom: rem(60);
+	// 		height: rem(340);
+	// 	}
+	// 	height: rem(180);
+	// 	margin-bottom: rem(40);
+	// }
 	.container {
 		@include media-breakpoint-down(sm) {
 			padding-left: rem(25);
@@ -59,7 +59,31 @@
 		position: relative;
 		z-index: 4;
 	}
-	
+	&__slider {
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(60);
+			height: rem(340);
+		}
+		height: rem(180);
+		margin-bottom: rem(40);
+		max-width: 100%;
+	}
+	&__slide {
+		@include media-breakpoint-up(lg) {
+			width: rem(340);
+		}
+		width: rem(180);
+		img {
+			max-width: 100%;
+			max-height: 100%;
+			width: 100%;
+			height: 100%;
+			transform: rotate(-15deg);
+		}
+	}
+	.swiper-wrapper{
+		transition-timing-function: linear!important;
+	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {

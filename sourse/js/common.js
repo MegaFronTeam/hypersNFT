@@ -1,5 +1,5 @@
 "use strict";
-const JSCCommon = { 
+const JSCCommon = {
 	modalCall() {
 		const link = '[data-fancybox="modal"], .link-modal-js';
 
@@ -23,8 +23,8 @@ const JSCCommon = {
 				PREV: "Назад",
 			},
 		});
-		document.querySelectorAll(".modal-close-js").forEach(el=>{
-			el.addEventListener("click", ()=>{
+		document.querySelectorAll(".modal-close-js").forEach(el => {
+			el.addEventListener("click", () => {
 				Fancybox.close();
 			})
 		})
@@ -79,7 +79,7 @@ const JSCCommon = {
 		}
 
 	},
-	mobileMenu() { 
+	mobileMenu() {
 		const menu = document.querySelector(".menu-mobile--js");
 		if (!menu) return;
 		this.toggleMenu();
@@ -153,7 +153,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask({"mask":"+9(999)999-99-99", showMaskOnHover: false}).mask(InputTel);
+		Inputmask({ "mask": "+9(999)999-99-99", showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -297,7 +297,7 @@ function eventHandler() {
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
-	
+
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
@@ -351,13 +351,54 @@ function eventHandler() {
 			// }
 		},
 	}
-	
+
+	const swiperHeader = new Swiper('.headerBlock__slider--js', {
+		slidesPerView: 1,
+		loop: true,
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: "auto",
+		coverflowEffect: {
+			rotate: 0,
+			stretch: -100,
+			depth: 300,
+			modifier: 1,
+			slideShadows: false
+		},
+		on: {
+			activeIndexChange(swiper) {
+				let activeVideo = swiper.$el[0].querySelector(`.swiper-slide:nth-child(${swiper.activeIndex + 1}) video`);
+				// console.log(swiper);
+				// console.log(activeSlide);
+				let videos = swiper.$el[0].querySelectorAll(`video`);
+				for (let elem of videos) {
+					elem.pause();
+					elem.currentTime = 0;
+				}
+				activeVideo.play();
+			}
+		}
+	});
+	const aboutSlider = new Swiper('.sAbout__slider--js', {
+		slidesPerView: 'auto',
+		loop: true,
+		spaceBetween: 20,
+		freeMode: false,
+		speed: 4000,
+		loopFillGroupWithBlank: true,
+		autoplay: {
+			delay: 0,
+			disableOnInteraction: false,
+		}
+		
+	});
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
 	});
-	
+
 	const swiper4 = new Swiper('.sBanners__slider--js', {
 		// slidesPerView: 5,
 		...defaultSl,
