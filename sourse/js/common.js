@@ -391,7 +391,7 @@ function eventHandler() {
 			delay: 0,
 			disableOnInteraction: false,
 		}
-		
+
 	});
 	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
 		slidesPerView: 'auto',
@@ -411,7 +411,104 @@ function eventHandler() {
 
 	});
 	// modal window
+	var lastId,
+		topMenu = $('.menu'),
+		topMenuHeight = topMenu.outerHeight(),
+		// All list items
+		menuItems = topMenu.find("a"),
+		// Anchors corresponding to menu items
+		scrollItems = menuItems.map(function () {
+			var item = $($(this).attr("href"));
+			if (item.length) { return item; }
+		});
 
+	// Bind click handler to menu items
+	// so we can get a fancy scroll animation
+	menuItems.click(function (e) {
+		var href = $(this).attr("href"),
+			offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+		$('html, body').stop().animate({
+			scrollTop: offsetTop
+		}, 300);
+		e.preventDefault();
+	});
+	// Bind to scroll
+	$(window).scroll(function () {
+		// Get container scroll position
+		var fromTop = $(this).scrollTop() + topMenuHeight;
+
+		// Get id of current scroll item
+		var cur = scrollItems.map(function () {
+			if ($(this).offset().top < fromTop)
+				return this;
+		});
+		// Get the id of the current element
+		cur = cur[cur.length - 1];
+		var id = cur && cur.length ? cur[0].id : "";
+
+		if (lastId !== id) {
+			lastId = id;
+			// Set/remove active class
+			menuItems
+				.parent().removeClass("menu-item-active")
+				.end().filter("[href='#" + id + "']").parent().addClass("menu-item-active");
+		}
+	});
+	function progressBar() {
+		// Узнаем на сколько страница прокручена
+		let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+		// Узнаем высоту всей страницы
+		let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		// Получаем в % на сколько прокручена страница
+		let scrolled = scroll / height * 100;
+		
+		// Подставляем % прокрутки в ширину нашей линии
+		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = scrolled*2.2 + 'px';
+		let textDown = document.querySelector('.scroll-bar__down');
+		let textUp = document.querySelector('.scroll-bar__up');
+		let linkDown = document.querySelector('.scroll-bar__link--down');
+		let linkUp = document.querySelector('.scroll-bar__link--up');
+		if (scrolled > 99){
+			if (!textUp.classList.contains('active')){
+				textDown.classList.remove('visible');
+				linkDown.classList.remove('visible');
+				setTimeout(() => {
+					textDown.classList.remove('active');
+					linkDown.classList.remove('active');
+				}, 50);
+				setTimeout(() => {
+					textUp.classList.add('active');
+					linkUp.classList.add('active');
+				}, 60);
+				setTimeout(() => {
+					textUp.classList.add('visible');
+					linkUp.classList.add('visible');
+				}, 90);
+				document.querySelector('.scroll-bar').classList.add('down');
+			} 
+		}else{
+			if (!textDown.classList.contains('active')){
+				textUp.classList.remove('visible');
+				linkUp.classList.remove('visible');
+				setTimeout(() => {
+					textUp.classList.remove('active');
+					linkUp.classList.remove('active');
+				}, 50);
+				setTimeout(() => {
+					textDown.classList.add('active');
+					linkDown.classList.add('active');
+				}, 60);
+				setTimeout(() => {
+					textDown.classList.add('visible');
+					linkDown.classList.add('visible');
+				}, 90);
+				document.querySelector('.scroll-bar').classList.remove('down');
+			} 
+		}
+	}
+
+	// Запускаем функцию, когда пользователя скролит
+	window.addEventListener('scroll', progressBar);
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

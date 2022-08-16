@@ -1,11 +1,12 @@
 .pixel-perfect {
-	top: 0;
+	top: 0px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
+	// height: 1000%;
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
@@ -84,7 +85,7 @@ body {
 		z-index: 999;
 		.top-nav{
 			@include media-breakpoint-down(lg){
-				background-color: transparent
+				background-color: $body-bg;
 			}
 		}
 		// &::before {

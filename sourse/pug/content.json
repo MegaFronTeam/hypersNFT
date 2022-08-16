@@ -1,10 +1,10 @@
 {
 	"nav":[
-		{ "name":"About", "url":"#"},
-		{	"name":"Team", "url":"#"},
-		{"name":"Road Map", "url":"#"},
-		{"name":"FAQ", "url":"#"} ,
-		{"name":"Community", "url":"#"}
+		{ "name":"About", "url":"#sAbout"},
+		{"name":"Road Map", "url":"#sRoadmap"},
+		{	"name":"Team", "url":"#sTeam"},
+		{"name":"FAQ", "url":"#sFAQ"} ,
+		{"name":"Community", "url":"#footer"}
 	],
 	"social":[
 		"fb","instagram","telegram"

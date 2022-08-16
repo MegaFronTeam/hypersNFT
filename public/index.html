@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>HYPERS NFT</title>
@@ -11,7 +11,7 @@
 		<link href="libs/@fancyapps/ui/fancybox.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<body class="main-page" data-bg="main.jpg">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav block-with-lazy">
@@ -30,11 +30,11 @@
 									</div>
 								</div>
 								<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">About</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Team</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Road Map</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">FAQ</a></li>
-									<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Community</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sAbout" itemprop="url">About</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sRoadmap" itemprop="url">Road Map</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sTeam" itemprop="url">Team</a></li>
+									<li class="menu-item" itemprop="item"><a href="#sFAQ" itemprop="url">FAQ</a></li>
+									<li class="menu-item" itemprop="item"><a href="#footer" itemprop="url">Community</a></li>
 								</ul>
 							</div>
 							<div class="top-nav__mob-wrap">
@@ -117,7 +117,7 @@
 				<div class="container">
 					<div class="sAbout__wrap">
 						<h2>What is Hypers?</h2>
-						<div class="sAbout__caption">Hypers&nbsp;&mdash; hype bears based on&nbsp;Binance in&nbsp;the amount of&nbsp;2222 unique 3D&nbsp;NFTs.<br />These bears don&rsquo;t hibernate, they stay on&nbsp;the hype all year round.<br /><br />Bears will be&nbsp;integrated into any available metaverse. When buying Hypers NFT, you have the opportunity to&nbsp;get limited merch and a&nbsp;Hypers figurine.
+						<div class="sAbout__caption">Hypers - hype bears based on&nbsp;Binance in&nbsp;the amount of&nbsp;2222 unique 3D&nbsp;NFTs.<br />These bears don&rsquo;t hibernate, they stay on&nbsp;the hype all year round.<br /><br />Bears will be&nbsp;integrated into any available metaverse. When buying Hypers NFT, you have the opportunity to&nbsp;get limited merch and a&nbsp;Hypers figurine.
 						</div>
 						<div class="sAbout__slider sAbout__slider--js">
 							<div class="swiper-wrapper">
@@ -415,7 +415,7 @@
 				<div class="paper-bg"><img src="img/paper-bg-up.png" alt=""/></div>
 			</section>
 			<!-- end sFAQ-->
-			<footer class="footer section">
+			<footer class="footer section" id="footer">
 				<div class="footer__bg"><img src="img/footer-bg.png" alt=""/>
 				</div>
 				<div class="container">
@@ -428,6 +428,28 @@
 						</svg><span>Join our community</span>
 					</a>
 					<div class="footer__copyright">Hypers NFT © 2022
+					</div>
+					<div class="scroll-bar">
+						<div class="scroll-bar__circle">
+							<svg class="circle-bar" data-percentage="0" viewBox="0 0 80 80">
+								<circle class="incomplete" cx="40" cy="40" r="35"></circle>
+								<circle class="complete" cx="40" cy="40" r="35" style="stroke-dashoffset: 220px;"></circle>
+							</svg>
+							<a class="scroll-bar__link scroll-bar__link--down active visible" href="#footer">
+								<svg class="icon icon-arrow-down ">
+									<use xlink:href="img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</a>
+							<a class="scroll-bar__link scroll-bar__link--up" href="#headerBlock">
+								<svg class="icon icon-arrow-up ">
+									<use xlink:href="img/svg/sprite.svg#arrow-up"></use>
+								</svg>
+							</a>
+						</div>
+						<div class="scroll-bar__down active visible">Scroll down
+						</div>
+						<div class="scroll-bar__up">Scroll up
+						</div>
 					</div>
 				</div>
 				<div class="footer__pics-wrap">

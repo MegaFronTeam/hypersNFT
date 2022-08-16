@@ -45,3 +45,17 @@ mixin page-head(t,...items)
 			+breadcrumb('Главная',...items)
 
 			h1= t
+
+
+mixin scrollbar()
+	+b.scroll-bar
+		+e.circle
+			svg.circle-bar(data-percentage='0' viewBox='0 0 80 80')
+				circle.incomplete(cx='40' cy='40' r='35')
+				circle.complete(cx='40' cy='40' r='35' style='stroke-dashoffset: 220px;')
+			+e.link--down.active.visible(href="#footer")
+				+icon('arrow-down')
+			+e.link--up(href="#headerBlock")
+				+icon('arrow-up')
+		+e.down.active.visible Scroll down
+		+e.up Scroll up

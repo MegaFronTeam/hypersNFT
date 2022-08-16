@@ -1,5 +1,5 @@
 mixin footer()
-	+b.FOOTER.footer.section
+	+b.FOOTER.footer.section#footer
 		+e.bg
 			img(src="img/footer-bg.png", alt="")
 		.container
@@ -9,6 +9,7 @@ mixin footer()
 				+icon('telegram')
 				span Join our community
 			+e.copyright Hypers NFT © 2022
+			+scrollbar
 		+e.pics-wrap
 			+e.pic--pic1
 				img.d-none.d-lg-block(src="img/footer-pic-1.png", alt="")
