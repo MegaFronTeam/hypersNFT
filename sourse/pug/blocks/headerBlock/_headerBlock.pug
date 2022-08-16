@@ -13,7 +13,7 @@ mixin headerBlock()
 					- for(var x=0;x<3;x++)
 						+slide
 		+e.video.d-block.d-lg-none
-			video(loop="loop" muted="muted" autoplay)
+			video(loop="loop" muted="muted" autoplay playsinline)
 				source(src="video/header.mp4")
 		+e.wrap
 			+e.block
