@@ -8,7 +8,7 @@ mixin headerBlock()
 				.swiper-wrapper
 					mixin slide()
 						+e.slide.swiper-slide
-							video.swiper-lazy(loop="loop" muted="muted")
+							video(loop="loop" muted="muted")
 								source(src="video/header.mp4")
 					- for(var x=0;x<3;x++)
 						+slide
