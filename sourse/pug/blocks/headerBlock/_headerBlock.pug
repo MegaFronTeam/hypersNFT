@@ -3,7 +3,7 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		//- +e.bg-text
 		//- 	img(src="img/svg/headerblock-bg.svg", alt="")
-		+e.wrap-slider
+		+e.wrap-slider.d-none.d-lg-block
 			+e.slider--js.swiper
 				.swiper-wrapper
 					mixin slide()
@@ -12,6 +12,9 @@ mixin headerBlock()
 								source(src="video/header.mp4")
 					- for(var x=0;x<3;x++)
 						+slide
+		+e.video.d-block.d-lg-none
+			video(loop="loop" muted="muted" autoplay)
+				source(src="video/header.mp4")
 		+e.wrap
 			+e.block
 			+e.caption NET collection of&nbsp;2,222 unique 3D&nbsp;Hypers

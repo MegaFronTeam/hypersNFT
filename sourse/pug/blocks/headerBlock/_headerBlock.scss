@@ -85,6 +85,11 @@
 			height: 100%;
 		}
 	}
+	&__video{
+		video{
+			max-width: 100%;
+		}
+	}
 	.swiper-slide-active {
 		z-index: 2;
 		// background-color: red;
