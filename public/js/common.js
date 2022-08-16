@@ -461,15 +461,15 @@ function eventHandler() {
 		let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 		// Получаем в % на сколько прокручена страница
 		let scrolled = scroll / height * 100;
-		
+
 		// Подставляем % прокрутки в ширину нашей линии
-		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = scrolled*2.2 + 'px';
+		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = scrolled * 2.2 + 'px';
 		let textDown = document.querySelector('.scroll-bar__down');
 		let textUp = document.querySelector('.scroll-bar__up');
 		let linkDown = document.querySelector('.scroll-bar__link--down');
 		let linkUp = document.querySelector('.scroll-bar__link--up');
-		if (scrolled > 99){
-			if (!textUp.classList.contains('active')){
+		if (scrolled > 99) {
+			if (!textUp.classList.contains('active')) {
 				textDown.classList.remove('visible');
 				linkDown.classList.remove('visible');
 				setTimeout(() => {
@@ -485,9 +485,9 @@ function eventHandler() {
 					linkUp.classList.add('visible');
 				}, 90);
 				document.querySelector('.scroll-bar').classList.add('down');
-			} 
-		}else{
-			if (!textDown.classList.contains('active')){
+			}
+		} else {
+			if (!textDown.classList.contains('active')) {
 				textUp.classList.remove('visible');
 				linkUp.classList.remove('visible');
 				setTimeout(() => {
@@ -503,9 +503,13 @@ function eventHandler() {
 					linkDown.classList.add('visible');
 				}, 90);
 				document.querySelector('.scroll-bar').classList.remove('down');
-			} 
+			}
 		}
 	}
+	if (window.innerWidth < 992) {
+		document.querySelector('.headerBlock__video video').play();
+	}
+
 
 	// Запускаем функцию, когда пользователя скролит
 	window.addEventListener('scroll', progressBar);
