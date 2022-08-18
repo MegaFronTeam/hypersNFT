@@ -135,14 +135,10 @@
 		margin-right: auto;
 		padding-bottom: rem(40);
 	}
-	&.down {
-		@include media-breakpoint-up(lg) {
-			bottom: rem(40);
-		}
-	}
+	
 	@include media-breakpoint-up(lg) {
 		position: fixed;
-		bottom: rem(190);
+		bottom: rem(40);
 		left: rem(40);
 		z-index: 10;
 	}
@@ -157,7 +153,7 @@
 		display: none;
 		opacity: 0;
 		transition-duration: 0.2s;
-		margin-left: rem(20);
+		margin-left: rem(14);
 		font-size: $small;
 		line-height: calc(20 / 16);
 	}
@@ -175,7 +171,7 @@
 	.circle-bar {
 		width: rem(60);
 		height: rem(60);
-		transform: rotate(-90deg) scaleY(-1);
+		transform: rotate(-90deg);
 	}
 	circle {
 		fill: transparent;
@@ -183,14 +179,16 @@
 		stroke-dashoffset: 220;
 	}
 	.incomplete {
-		stroke: $primary;
-		
+		stroke: #ddddde;
+		@include media-breakpoint-down(lg){
+			display: none;
+		}
 	}
 	.complete {
-		stroke: #ddddde;
+		stroke: $primary;
 		stroke-dasharray: 220;
 		@include media-breakpoint-down(lg) {
-			display: none;
+			display: block;
 		}
 	}
 	&__circle {

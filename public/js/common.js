@@ -463,7 +463,7 @@ function eventHandler() {
 		let scrolled = scroll / height * 100;
 
 		// Подставляем % прокрутки в ширину нашей линии
-		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = scrolled * 2.2 + 'px';
+		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = 220 - scrolled * 2.2 + 'px';
 		let textDown = document.querySelector('.scroll-bar__down');
 		let textUp = document.querySelector('.scroll-bar__up');
 		let linkDown = document.querySelector('.scroll-bar__link--down');
@@ -484,7 +484,7 @@ function eventHandler() {
 					textUp.classList.add('visible');
 					linkUp.classList.add('visible');
 				}, 90);
-				document.querySelector('.scroll-bar').classList.add('down');
+				// document.querySelector('.scroll-bar').classList.add('down');
 			}
 		} else {
 			if (!textDown.classList.contains('active')) {
@@ -502,7 +502,7 @@ function eventHandler() {
 					textDown.classList.add('visible');
 					linkDown.classList.add('visible');
 				}, 90);
-				document.querySelector('.scroll-bar').classList.remove('down');
+				// document.querySelector('.scroll-bar').classList.remove('down');
 			}
 		}
 	}

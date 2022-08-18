@@ -2,10 +2,11 @@
 .sAbout {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(80)};
-		--sPB: #{rem(180)};
+		--sPB: #{rem(280)};
 	}
 	--sPT: #{rem(30)};
 	--sPB: #{rem(50)};
+	min-height: 100vh;
 	// --sPB:0;
 	h2 {
 		text-align: center;

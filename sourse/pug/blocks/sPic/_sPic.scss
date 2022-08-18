@@ -8,6 +8,8 @@
 	background-image: url(../img/sPic-bg.png);
 	background-size: cover;
 	background-repeat: no-repeat;
+	max-height: 100vh;
+	background-color: #f3f3f3;
 	&__white-crest {
 		@include media-breakpoint-down(lg) {
 			display: none;
