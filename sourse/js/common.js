@@ -224,7 +224,7 @@ const JSCCommon = {
 			}
 			else {
 				let destination = $(elementClick).offset().top;
-				$('html, body').animate({ scrollTop: destination - 80 }, 0);
+				$('html, body').animate({ scrollTop: destination - 80 }, 400);
 				return false;
 			}
 		});
@@ -296,7 +296,7 @@ function eventHandler() {
 	JSCCommon.heightwindow();
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
