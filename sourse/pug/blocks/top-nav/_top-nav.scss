@@ -29,7 +29,8 @@
 		height: 79px;
 		background-color: transparent;
 		&.fixed{
-			background-color: $white;
+			background-color: rgba(255,255,255,0.7);
+			backdrop-filter: blur(50px);
 		}
 	}
 	&__col {
@@ -83,6 +84,15 @@
 		font-size: $small;
 		line-height: calc(20 / 16);
 		margin-top: rem(40);
+	}
+	.soc__item{
+		@include media-breakpoint-down(lg){
+			width: rem(30);
+			height: rem(30);
+			.icon{
+				font-size: rem(15);
+			}
+		}
 	}
 	@include media-breakpoint-up(md) {
 	}

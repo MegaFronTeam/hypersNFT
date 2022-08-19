@@ -135,10 +135,9 @@
 		margin-right: auto;
 		padding-bottom: rem(40);
 	}
-	
 	@include media-breakpoint-up(lg) {
 		position: fixed;
-		bottom: rem(40);
+		bottom: rem(100);
 		left: rem(40);
 		z-index: 10;
 	}
@@ -189,6 +188,7 @@
 		stroke-dasharray: 220;
 		@include media-breakpoint-down(lg) {
 			display: block;
+			stroke-dashoffset:0 !important;
 		}
 	}
 	&__circle {

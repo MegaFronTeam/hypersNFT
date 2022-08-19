@@ -540,7 +540,7 @@ h4 {
 		position: absolute;
 		top: 0;
 		left: 0;
-		// width: 100%;
+		min-width: 100%;
 		height: 100%;
 		object-fit: cover;
 	}
@@ -570,7 +570,7 @@ h4 {
 	}
 }
 .btn {
-	transition-duration: 0.4s;
+	transition-duration: 0.2s;
 }
 .btn-primary {
 	&:hover {

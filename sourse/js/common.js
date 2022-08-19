@@ -309,10 +309,19 @@ function eventHandler() {
 
 	function setFixedNav() {
 		let topNav = document.querySelector('.top-nav  ');
+		let hCaption = document.querySelector('.headerBlock__caption');
+		let soc = document.querySelector('.headerBlock .soc');
 		if (!topNav) return;
+		if (window.scrollY > 0) {
+			topNav.classList.add('fixed');
+			hCaption.classList.remove('visible');
+			soc.classList.remove('visible');
+		} else {
+			topNav.classList.remove('fixed');
+			hCaption.classList.add('visible');
+			soc.classList.add('visible');
+		}
 		window.scrollY > 0
-			? topNav.classList.add('fixed')
-			: topNav.classList.remove('fixed');
 	}
 
 	function whenResize() {
@@ -461,13 +470,25 @@ function eventHandler() {
 		let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 		// Получаем в % на сколько прокручена страница
 		let scrolled = scroll / height * 100;
-
+		// let hCaption = document.querySelector('.headerBlock__caption');
 		// Подставляем % прокрутки в ширину нашей линии
 		document.querySelector('.scroll-bar .complete').style.strokeDashoffset = 220 - scrolled * 2.2 + 'px';
 		let textDown = document.querySelector('.scroll-bar__down');
 		let textUp = document.querySelector('.scroll-bar__up');
 		let linkDown = document.querySelector('.scroll-bar__link--down');
 		let linkUp = document.querySelector('.scroll-bar__link--up');
+		// if (scroll > 0.1) {
+		// 	hCaption.classList.remove('visible');
+		// 	setTimeout(() => {
+		// 		hCaption.classList.remove('d-lg-block');
+		// 	}, 1200)
+		// } else {
+		// 	hCaption.classList.add('d-lg-block');
+		// 	console.log(1);
+		// 	setTimeout(() => {
+		// 		hCaption.classList.add('visible');
+		// 	}, 1200)
+		// }
 		if (scrolled > 99) {
 			if (!textUp.classList.contains('active')) {
 				textDown.classList.remove('visible');

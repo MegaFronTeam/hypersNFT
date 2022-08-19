@@ -2,14 +2,14 @@
 .headerBlock {
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(100)};
-		--sPB: #{rem(220)};
+		--sPB: #{rem(180)};
 		padding-left: rem(40);
 		padding-right: rem(40);
-		max-height: calc(100vh + rem(100));
 	}
-	max-height: calc(100vh + rem(30));
-	--sPT: #{rem(120)};
-	--sPB: #{rem(90)};
+	max-height: 100vh;
+	height: 100vh;
+	--sPT: #{rem(80)};
+	--sPB: #{rem(30)};
 	padding-left: rem(25);
 	padding-right: rem(25);
 	display: flex;
@@ -54,20 +54,56 @@
 			flex-grow: 1;
 			font-size: $small;
 			margin-top: 0;
+			position: fixed;
+			bottom: rem(120);
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 5;
+			color: $secondary;
+			transition-duration: 0.4s;
+			opacity: 0;
+			pointer-events: none;
 		}
 		margin-top: rem(40);
 		margin-bottom: rem(29);
 		text-align: center;
-		color: $secondary;
+		&.visible{
+			opacity: 1;
+			pointer-events: all;
+		}
+	}
+	.soc{
+		@include media-breakpoint-up(lg) {
+			position: fixed;
+			bottom: rem(100);
+			transform: translateX(-50%);
+			z-index: 5;
+			right: rem(0);
+			opacity: 0;
+			pointer-events: none;
+			transition-duration: 0.4s;
+		}
+		&.visible{
+			opacity: 1;
+			pointer-events: all;
+		}
 	}
 	&__slider {
 		// max-width: 100%;
 		overflow: visible;
 	}
 	&__wrap-slider {
-		@include media-breakpoint-up(lg) {
-			// width: 40.625vw;
+		@include media-breakpoint-up(xxl){
 			width: 69vh;
+		}
+		@include media-breakpoint-up(xl){
+			width: rem(540);
+		}
+		@include media-breakpoint-up(lg) {
+			width: rem(480);
+			// width: 69vh;
+			// width: calc(34.5vh + 20.3vw);
+			
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -125,6 +161,12 @@
 	}
 	.swiper-slide-next {
 		// transform: scale(0.77) translateX(-9.9vw);
+	}
+	&__overflow-container{
+		// margin-left: auto;
+		// margin-right: auto;
+		// max-width: 70vw;
+		// overflow: hidden;
 	}
 	@include media-breakpoint-up(xl) {
 	}
