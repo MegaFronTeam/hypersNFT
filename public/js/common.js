@@ -367,10 +367,11 @@ function eventHandler() {
 		effect: "coverflow",
 		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: "auto",
+		slidesPerView: 1,
+		// spaceBetween: 30,
 		coverflowEffect: {
 			rotate: 0,
-			stretch: -100,
+			stretch: -140,
 			depth: 300,
 			modifier: 1,
 			slideShadows: false

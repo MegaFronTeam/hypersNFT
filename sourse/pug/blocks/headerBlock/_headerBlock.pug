@@ -9,12 +9,12 @@ mixin headerBlock()
 					.swiper-wrapper
 						mixin slide()
 							+e.slide.swiper-slide
-								video(loop="loop" muted="muted")
-									source(src="video/header.mp4")
+								video(loading="lazy" loop="loop" muted="muted" playsinline autobuffer)
+									source(loading="lazy" src="video/header.mp4")
 						- for(var x=0;x<3;x++)
 							+slide
 		+e.video.d-block.d-lg-none
-			video(loop="loop" muted="muted" autoplay playsinline)
+			video(loop="loop" muted="muted" autoplay playsinline autobuffer)
 				source(src="video/header.mp4")
 		+e.wrap
 			+e.caption.visible NET collection of&nbsp;2,222 unique 3D&nbsp;Hypers
