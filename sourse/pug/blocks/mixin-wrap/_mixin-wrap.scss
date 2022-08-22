@@ -10,6 +10,7 @@
 		align-items: center;
 		width: rem(60);
 		height: rem(60);
+	
 		border-radius: 50%;
 		@include media-breakpoint-up(lg) {
 			background-color: $white;
@@ -137,7 +138,7 @@
 	}
 	@include media-breakpoint-up(lg) {
 		position: fixed;
-		bottom: rem(100);
+		bottom: rem(20);
 		left: rem(40);
 		z-index: 10;
 	}

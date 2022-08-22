@@ -14,6 +14,9 @@
 	padding-right: rem(25);
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	align-items: center;
 	// background-color: #f4f3f4;
 	background-color: #fff;
 	&__bg-text {
@@ -34,10 +37,12 @@
 	&__wrap {
 		display: flex;
 		margin-top: auto;
+		
 		flex-direction: column;
 		align-items: center;
 		@include media-breakpoint-up(lg) {
 			flex-direction: row;
+			margin-top: 0;
 		}
 	}
 	&__block {
@@ -56,7 +61,7 @@
 			font-size: $small;
 			margin-top: 0;
 			position: fixed;
-			bottom: rem(120);
+			bottom: rem(35);
 			left: 50%;
 			transform: translateX(-50%);
 			z-index: 5;
@@ -76,7 +81,7 @@
 	.soc{
 		@include media-breakpoint-up(lg) {
 			position: fixed;
-			bottom: rem(100);
+			bottom: rem(20);
 			transform: translateX(-50%);
 			z-index: 5;
 			right: rem(0);
@@ -129,6 +134,7 @@
 	}
 	&__video {
 		// overflow: hidden;
+		flex-grow: 1;
 		@include block(100, 100);
 		&::after {
 			content:'';
@@ -139,7 +145,7 @@
 			height: calc(100% + 4px);
 			z-index: 2;
 			background-color: transparent;
-			border: 6px solid #f3f3f3;
+			// border: 6px solid #f3f3f3;
 		}
 		video {
 			position: absolute;
