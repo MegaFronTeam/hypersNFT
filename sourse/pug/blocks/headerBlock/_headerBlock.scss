@@ -97,8 +97,11 @@
 	&__slider {
 		// max-width: 100%;
 		overflow: visible;
+		height: 100%;
 	}
 	&__wrap-slider {
+		flex-grow: 1;
+		width: 100%;
 		@include media-breakpoint-up(xxl){
 			width: 69vh;
 		}
@@ -170,6 +173,7 @@
 		// transform: scale(0.77) translateX(-9.9vw);
 	}
 	&__overflow-container{
+		// flex-grow: ;
 		// margin-left: auto;
 		// margin-right: auto;
 		// max-width: 90%;

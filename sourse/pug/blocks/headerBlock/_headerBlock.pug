@@ -3,19 +3,21 @@ mixin headerBlock()
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		//- +e.bg-text
 		//- 	img(src="img/svg/headerblock-bg.svg", alt="")
-		+e.overflow-container
-			+e.wrap-slider.d-none.d-lg-block
-				+e.slider--js.swiper
-					.swiper-wrapper
-						mixin slide(x)
-							+e.slide.swiper-slide
-								video(loading="lazy" loop="loop" muted="muted" playsinline autobuffer)
-									source(loading="lazy" src=`video/hype-${x}.webm`)
-						- for(var x=1;x<6;x++)
-							+slide(x)
-		+e.video.d-block.d-lg-none
-			video(loop="loop" muted="muted" autoplay playsinline )
-				source(src="video/hype-2.webm")
+		//- +e.overflow-container
+		+e.wrap-slider
+			+e.slider--js.swiper
+				.swiper-wrapper
+					mixin slide(x)
+						+e.slide.swiper-slide
+							video(loading="lazy" loop="loop" muted="muted" playsinline autobuffer)
+								source(loading="lazy" src=`video/hype-${x}.webm`  type="video/webm" )
+								source(src=`video/hype-${x}.mp4` type="video/mp4")
+					- for(var x=1;x<6;x++)
+						+slide(x)
+		//- +e.video.d-block.d-lg-none
+		//- 	video(loop="loop" muted="muted" autoplay playsinline )
+		//- 		source(src="video/hype-2.webm" type="video/webm")
+		//- 		source(src="video/hype-2.mp4" type="video/mp4")
 		+e.wrap
 			+e.caption.visible NET collection of&nbsp;2,222 unique 3D&nbsp;Hypers
 			+e.block

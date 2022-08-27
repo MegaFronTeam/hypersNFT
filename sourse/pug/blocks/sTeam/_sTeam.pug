@@ -11,16 +11,17 @@ mixin sTeam(data)
 							+pic(`team-${pic}.png`,'',0)
 							+e.item-title-wrap
 								+e.item-title!=title
-								+e.item-link(href="#")
-									+icon('twitter')
+								if a
+										+e.item-link(href= a target="_blank")
+											+icon('twitter')
 							+e.item-caption!=caption
 				+item(1,`Daniels`,`Founder`,'https://twitter.com/dan_ielas')
-				+item(4,`Andrew`,`Co-founder`,'https://twitter.com/axubsc')
-				//- +item(3,`Marshall`,`Creative Director`,'')
-				//- +item(4,`Orlando`,`Community Manager`,'')
-				//- +item(5,`Kevin`,`Marketing Manager`,'')
-				//- +item(6,`Robben`,`Blockchain Developer`,'')
+				+item(2,`Andrew`,`Co-founder`,'https://twitter.com/axubsc')
+				+item(3,`David`,`3D Animator/Designer`)
+				+item(4,`Orlando`,`Community Manager`)
+				+item(5,`Kevin`,`Marketing Manager`)
+				+item(6,`Robben`,`Blockchain Developer`)
 			+e.btn.btn.btn-outline-primary(href="https://twitter.com/hypersnfts") Join our community
 		.paper-bg
 			img(src="img/paper-bg-up.png", alt="")
-	// end sTeam
+	// end sTeam2

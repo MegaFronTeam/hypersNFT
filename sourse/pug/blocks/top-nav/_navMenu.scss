@@ -174,10 +174,10 @@
 		position: fixed !important;
 		z-index: 15;
 		max-width: 100%;
-		height: calc(100vh - rem(78));
+		// height: calc(100vh - rem(78));
 		width: 100%;
 		top: rem(79);
-		min-height: calc(100vh - rem(78));
+		max-height: calc(var(--vh) * 100 - rem(78));
 		overflow-y: auto;
 		padding-top: rem(60);
 		padding-bottom: rem(60);
