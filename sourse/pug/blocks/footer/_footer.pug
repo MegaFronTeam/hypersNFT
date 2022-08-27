@@ -6,17 +6,18 @@ mixin footer()
 			h2 Join our community
 			+e.caption Don&rsquo;t miss the launch of&nbsp;the most long-awaited project on&nbsp;the TON blockchain in&nbsp;2022
 			+e.btn.btn.btn-primary(href="#")
-				+icon('telegram')
+				+icon('twitter')
 				span Join our community
 			+e.copyright Hypers NFT © 2022
 			+scrollbar
 		+e.pics-wrap
-			+e.pic--pic1
-				img.d-none.d-lg-block(src="img/footer-pic-1.png", alt="")
-				img.d-lg-none.d-block(src="img/footer-pic-1-mob.png", alt="")
-			+e.pic--pic2
-				img.d-none.d-lg-block(src="img/footer-pic-2.png", alt="")
-				img.d-lg-none.d-block(src="img/footer-pic-2-mob.png", alt="")
-			+e.pic--pic3
-				img.d-none.d-lg-block(src="img/footer-pic-3.png", alt="")
-				img.d-lg-none.d-block(src="img/footer-pic-3-mob.png", alt="")
+			+e.PICTURE.pic--pic1
+				source(media="(min-width: 992px )", srcset="img/footer-pic-1.png") 
+				img(src="img/footer-pic-1-mob.png", alt="")
+				
+			+e.PICTURE.pic--pic2
+				source(media="(min-width: 992px )", srcset="img/footer-pic-2.png") 
+				img(src="img/footer-pic-2-mob.png", alt="")
+			+e.PICTURE.pic--pic3
+				source(media="(min-width: 992px )", srcset="img/footer-pic-3.png") 
+				img(src="img/footer-pic-3-mob.png", alt="")

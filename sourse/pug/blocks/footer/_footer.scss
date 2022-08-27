@@ -10,7 +10,7 @@
 	display: flex;
 	flex-direction: column;
 	@include media-breakpoint-up(lg) {
-		min-height: 46.7vw;
+		min-height: 46.7vh;
 	}
 	min-height: unset;
 	h2 {
@@ -48,11 +48,20 @@
 		line-height: calc(20 / 16);
 		font-size: $small;
 		text-align: center;
+		// &::before{
+		// 	content: '';
+		// 	position: absolute;
+		// 	right: 0;
+		// 	top: 50%;
+		// 	width: 100vw;
+		// 	height: 1px;
+		// 	background-color: #000;
+		// }
 		@include media-breakpoint-up(lg) {
 			position: absolute;
 			white-space: nowrap;
 			right: rem(40);
-			bottom: rem(60);
+			bottom: rem(40);
 		}
 		@include media-breakpoint-down(lg) {
 			margin-top: rem(60);
@@ -83,16 +92,21 @@
 		}
 	}
 	&__pic {
-		@include media-breakpoint-up(lg) {
-			@include block(480, 400);
-		}
-		@include block(190, 212);
-		img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
+		// @include media-breakpoint-up(lg) {
+		// 	@include block(480, 400);
+		// }
+		// @include block(190, 212);
+		// img {
+		// 	position: absolute;
+		// 	top: 0;
+		// 	left: 0;
+		// 	width: 100%;
+		// 	height: 100%;
+		// }
+		text-align: center;
+		img{
+			max-width: 100%;
+			height: auto;
 		}
 		@include media-breakpoint-up(lg) {
 			&--pic1,

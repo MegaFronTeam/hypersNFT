@@ -23,6 +23,7 @@
 	.row {
 		--bs-gutter-x: #{rem(20)};
 		--bs-gutter-y: #{rem(50)};
+		justify-content: center;
 	}
 	&__item {
 		display: flex;
