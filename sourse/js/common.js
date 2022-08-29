@@ -368,6 +368,11 @@ function eventHandler() {
 		grabCursor: true,
 		centeredSlides: true,
 		slidesPerView: 1,
+		loopAdditionalSlides: 2,
+		speed: 1000,
+		autoplay: {
+			delay: 4000,
+		},
 		// spaceBetween: 30,
 		coverflowEffect: {
 			rotate: 0,
