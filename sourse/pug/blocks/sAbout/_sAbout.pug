@@ -3,8 +3,8 @@ mixin sAbout(data)
 	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
 		.container
 			+e.wrap
-				h2 What is Hypers?
-				+e.caption Hypers - hype bears based on&nbsp;Binance in&nbsp;the amount of&nbsp;2222 unique 3D&nbsp;NFTs.<br />These bears don&rsquo;t hibernate, they stay on&nbsp;the hype all year round.<br /><br />Bears will be&nbsp;integrated into any available metaverse. When buying Hypers NFT, you have the opportunity to&nbsp;get limited merch and a&nbsp;Hypers figurine.
+				h2 About Hypers
+				+e.caption Hypers is&nbsp;a&nbsp;collection of&nbsp;5555&nbsp;NFTs. Stake and get $HYPERS. Use $HYPERS to&nbsp;buy NFT blue chips or&nbsp;participate in&nbsp;raffles. The holders manage the Hyperlty pool, which is&nbsp;constantly replenished with liquidity from the Launchpad, Staking, Raffles services and Royalty.
 				+e.slider--js
 					.swiper-wrapper
 						mixin slide(pic)
@@ -12,7 +12,9 @@ mixin sAbout(data)
 								img(src=`img/about-${pic}.png`, alt="")
 						- for(var x = 0; x<15; x++)
 							+slide(x+1)
-				+e.btn.btn.btn-outline-primary(href="https://twitter.com/hypersnfts") Join our community
+				+e.btn.btn.btn-outline-primary(href="https://twitter.com/hypersnfts")
+					+icon("twitter")
+					| Join Community
 		.paper-bg.paper-bg--up
 			img(src="img/paper-bg-up1.png", alt="")
 		.paper-bg

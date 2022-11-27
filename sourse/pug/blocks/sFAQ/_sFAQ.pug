@@ -4,23 +4,29 @@ mixin sFAQ()
 		.container
 			+b.section-title.text-center
 				h2 FAQ
-			h3 How do I buy Hypers?
+			h3 How to get $HYPERS
 			+e.number-wrap
 				+e.number-item-wrap--first
-					+e.number-item Create an&nbsp;account on&nbsp;the Binance
+					+e.number-item Mint NFT
 						+e.number 1
 				+e.number-item-wrap--second
-					+e.number-item Find the collection with official links
+					+e.number-item Staking NFT
 						+e.number 2
 				+e.number-item-wrap--third
-					+e.number-item Choose your favorite NFT and buy it&nbsp;4. The NFT is&nbsp;available in&nbsp;your Binance account
+					+e.number-item Get $HYPERS
 						+e.number 3
+				+e.number-item-wrap--4
+					+e.number-item Exchange $HYPERS for blue chip NFT
+						+e.number 4
 			+ddGroup()
 				each item in sFAQ.ddGroup
 					+ddGroupItem(`${item.title}`)
 						each paragraph in item.content
 							p!= paragraph
-			+e.btn.btn.btn-outline-primary(href="https://twitter.com/hypersnfts") Join our community
+			.text-center
+				+e.btn.btn.btn-outline-primary(href="https://twitter.com/hypersnfts") 
+					+icon("twitter")
+					| Join Community
 		.paper-bg
 			img(src="img/paper-bg-up.png", alt="")
 	// end sFAQ

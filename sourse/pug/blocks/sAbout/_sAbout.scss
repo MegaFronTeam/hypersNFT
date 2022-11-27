@@ -37,7 +37,7 @@
 	}
 	&__caption {
 		width: 100%;
-		max-width: rem(980);
+		max-width: rem(940);
 		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(60);
 		}
@@ -87,6 +87,12 @@
 	}
 	.paper-bg--up {
 		background-color: #fefcfe;;
+	}
+	&__btn{
+		.icon{
+			font-size: rem(24);
+			margin-right: rem(10);
+		}
 	}
 	@include media-breakpoint-up(xl) {
 	}

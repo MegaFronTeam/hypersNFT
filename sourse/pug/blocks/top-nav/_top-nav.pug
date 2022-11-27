@@ -34,11 +34,15 @@ mixin top-nav()
 						+menu-toggle()
 						+mnu()
 					+e.mob-wrap
-						+e.join.btn.btn-outline-primary.btn-small(href='https://twitter.com/hypersnfts') Join our community
+						+e.join.btn.btn-outline-primary.btn-small(href='https://twitter.com/hypersnfts') 
+							+icon("twitter")
+							| Join Community
 						+soc
 						+e.cop Hypers NFT © 2022
 			+e.col--right.col-auto.d-none.d-lg-block
-				+e.join.btn.btn-outline-primary.btn-small(href='https://twitter.com/hypersnfts') Join our community
+				+e.join.btn.btn-outline-primary.btn-small(href='https://twitter.com/hypersnfts')
+					+icon("twitter")
+					| Join Community
 			+e.col.col-auto.d-lg-none
 				+menu-toggle()
 	// end top-nav

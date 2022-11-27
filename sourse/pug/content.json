@@ -1,10 +1,12 @@
 {
 	"nav":[
-		{ "name":"About", "url":"#sAbout"},
-		{"name":"Road Map", "url":"#sRoadmap"},
-		{	"name":"Team", "url":"#sTeam"},
-		{"name":"FAQ", "url":"#sFAQ"} ,
-		{"name":"Community", "url":"#footer"}
+		{ "name":"About", "url":"#sAbout","class":"scroll-link-js"},
+		{"name":"Road Map", "url":"#sRoadmap","class":"scroll-link-js"},
+		{	"name":"Team", "url":"#sTeam","class":"scroll-link-js"},
+		{"name":"FAQ", "url":"#sFAQ","class":"scroll-link-js"} ,
+		{"name":"Launchpad", "url":"#sLaunchpad","class":"scroll-link-js"} ,
+		{"name":"Staking", "url":"#"} ,
+		{"name":"Raffles", "url":"#"}
 	],
 	"social":[
 		"fb","instagram","telegram"
@@ -33,30 +35,30 @@
 			"ddGroup": [
 				{
 					"active": "active",
-					"title": "When is the start of sales?",
+					"title": "How can I become part of the community?",
 					"content": [
-						"The start of&nbsp;sales will be&nbsp;announced on&nbsp;our social networks."
+						"Join our discord and get OG and Hyperlist roles."
 					]
 				},
 				{
 					"active": "",
-					"title": "What will be the price of NFT?",
+					"title": "What is Hyperlty?",
 					"content": [
-						"Round 1: $99, Round 2: $149, Round 3: $199"
+						"Hyperlty is a pool for holders. The money from the Hyperlty will be used to buy Blue Chip NFT, which holders will be able to receive in exchange for $Hypers on the raffle platform."
 					]
 				},
 				{
 					"active": "",
-					"title": "Where can I buy and track my NFTs?",
+					"title": "Where will Hyperlty's liquidity come from?",
 					"content": [
-						"NFTs will only be&nbsp;available for purchase on&nbsp;Binance and will be&nbsp;available in&nbsp;your account."
+						"We will monetize our main platforms: launchpad, staking, raffles. Projects that will be hosted on these platforms will pay a commission. Also, all royalties from secondary NFT sales will go to Hyperlty."
 					]
 				},
 				{
 					"active": "",
-					"title": "Why Hypers?",
+					"title": "When mint and NFT price?",
 					"content": [
-						"Hypers are the most attractive NFTs powered by&nbsp;Binance. For a&nbsp;long time, we&nbsp;have been gathering a&nbsp;team of&nbsp;the best specialists and analyzing the NFT market. Now we&nbsp;are ready to&nbsp;present the best product."
+						"All the details are in our discord. We will be glad to see you there!"
 					]
 				}
 				

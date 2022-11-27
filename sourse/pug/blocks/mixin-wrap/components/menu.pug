@@ -2,7 +2,7 @@
 mixin mnu()
 	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		each link in nav
-			li.menu-item(itemprop="item" ): a(href= link.url itemprop="url")= link.name
+			li.menu-item(itemprop="item" ): a(href= link.url class= link.class itemprop="url")= link.name
 			if link.subnav
 				li.menu-item.menu-item-has-children
 					a(href="#" itemprop="url") О нас
