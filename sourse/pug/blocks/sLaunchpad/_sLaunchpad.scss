@@ -1,7 +1,7 @@
 // start .sLaunchpad
 .sLaunchpad {
 	// --sPT: #{rem()};
-	--sPB: #{rem(180)};
+	--sPB: #{rem(90)};
 	@include media-breakpoint-up(lg) {
 		--sTPB: #{rem(85)};
 	}
@@ -18,6 +18,12 @@
 	}
 	&__item{
 
+	}
+	img{
+		@include media-breakpoint-up(lg) { 
+			border-radius: 20px;
+		}
+		border-radius: calc(#{rem(10px)} + 2vw);
 	}
 	picture{
 		margin-bottom: rem(60);

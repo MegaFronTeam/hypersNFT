@@ -231,8 +231,12 @@ const JSCCommon = {
 	},
 	getCurrentYear(el) {
 		let now = new Date();
-		let currentYear = document.querySelector(el);
-		if (currentYear) currentYear.innerText = now.getFullYear();
+		let currentYears = document.querySelectorAll(el);
+
+
+			for (const currentYear of currentYears) {
+				currentYear.innerText = now.getFullYear();
+			}
 	},
 	toggleShow(toggle, drop) {
 
@@ -294,6 +298,7 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	JSCCommon.heightwindow();
+	JSCCommon.getCurrentYear('.year');
 	JSCCommon.makeDDGroup();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	JSCCommon.animateScroll();

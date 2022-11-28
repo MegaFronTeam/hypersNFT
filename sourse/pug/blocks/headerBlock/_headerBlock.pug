@@ -23,9 +23,13 @@ mixin headerBlock()
 		//- 		source(src="video/hype-2.webm" type="video/webm")
 		//- 		source(src="video/hype-2.mp4" type="video/mp4")
 		+e.wrap
-			+e.caption.visible NET collection of&nbsp;2,222 unique 3D&nbsp;Hypers
+			+e.caption.visible NFT collection of&nbsp;5,555 unique Hypers
 			+e.block
-				+soc
+				a.btn.btn-primary(href="https://twitter.com/HypersPlatform" target="_blank").d-md-none 
+					+icon("twitter")
+					| Join Community
+				.d-none.d-md-block
+					+soc
 		//- .paper-bg
 		//- 	img(src="img/paper-bg-up.png", alt="")
 	// end headerBlock
