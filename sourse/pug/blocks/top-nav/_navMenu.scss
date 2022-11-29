@@ -12,8 +12,8 @@
 		// margin-left: 0;
 		// margin-right: 0;
 		@include media-breakpoint-up(lg) {
-			&:hover {
-				a {
+			a {
+					&:not(.disabled):hover {
 					background-color: $primary;
 					color: $white;
 				}

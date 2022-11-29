@@ -3,6 +3,7 @@
 	// --sPT: #{rem()};
 	--sPB: #{rem(90)};
 	@include media-breakpoint-up(lg) {
+		--sPB: #{rem(180)};
 		--sTPB: #{rem(85)};
 	}
 	&__row{

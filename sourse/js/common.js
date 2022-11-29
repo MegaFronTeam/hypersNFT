@@ -545,6 +545,8 @@ function eventHandler() {
 
 	// Запускаем функцию, когда пользователя скролит
 	window.addEventListener('scroll', progressBar);
+
+	$("a.disabled").click(function(e){e.preventDefault()})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

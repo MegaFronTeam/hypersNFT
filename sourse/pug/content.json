@@ -5,8 +5,8 @@
 		{	"name":"Team", "url":"#sTeam","class":"scroll-link-js"},
 		{"name":"FAQ", "url":"#sFAQ","class":"scroll-link-js"} ,
 		{"name":"Launchpad", "url":"#sLaunchpad","class":"scroll-link-js"} ,
-		{"name":"Staking", "url":"#"} ,
-		{"name":"Raffles", "url":"#"}
+		{"name":"Staking", "url":"#","class":"disabled"},
+		{"name":"Raffles", "url":"#","class":"disabled"}
 	],
 	"social":[
 		"fb","instagram","telegram"
